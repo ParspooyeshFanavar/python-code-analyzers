@@ -1,0 +1,9 @@
+[tool.import-analyzer]
+
+exclude = [
+    "tests/",
+    ".*_test.py",
+]
+exclude_toplevel_module = [
+    "xmlrpclib",
+]
