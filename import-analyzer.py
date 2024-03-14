@@ -323,6 +323,8 @@ for dirPath, subDirs, files in os.walk(scanDir):
 				handleStatementList(stm.args.defaults)
 				handleStatementList(stm.body)
 				handleStatementList(stm.decorator_list)
+			elif isinstance(stm, ast.Starred):
+				handleStatement(stm.value)
 			elif isinstance(stm, ast.Nonlocal):
 				# stm.names is list[str]
 				pass
